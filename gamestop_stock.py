@@ -3,9 +3,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests as rq
 from sqlite3.dbapi2 import Date
-
-
 import yfinance as yf
+
 GameStop = yf.Ticker("GME")
 gme_data = GameStop.history(period = "max")
 gme_data.reset_index(inplace=True)
@@ -51,3 +50,4 @@ gme_revenue["Revenue"] = pd.to_numeric(gme_revenue["Revenue"], errors="coerce")
 gme_revenue.dropna(inplace=True)
 gme_revenue = gme_revenue[gme_revenue['Revenue'] != ""]
 make_graph(gme_data, gme_revenue, 'GME')
+
