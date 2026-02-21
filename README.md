@@ -1,2 +1,34 @@
-I used PyCharm notebook because I wasn't using Jupyter notebook. They have the same functionality.
-Project1.py contains the code I wrote for Tesla, and project2.py contains the code I wrote for GameStop. Have good day!
+<div align="center">
+📊 IBM Data Science Python Project
+
+*Project Overview*
+This project demonstrates data analysis and visualization skills using Python. 
+It contains two scripts analyzing stock prices of Tesla and GameStop using real-world data.
+
+*Tools & Libraries*
+1.Python
+  1.1.requests (to fetch web data)
+  1.2.BeautifulSoup (to parse HTML data)
+  1.3.yfinance (to get historical stock data)
+  1.4.pandas (for data cleaning and table creation)
+  1.5.matplotlib.pyplot (for visualization)
+  1.6.sqlite3 (for optional data storage)
+
+*Project Structure*
+1. `tesla_stock.py` - fetches and visualizes Tesla stock prices over time.
+2. `gamestop_stock.py` - fetches and visualizes GameStop stock prices over time.
+3. `data/` - optional data files (if used)
+4. `images/` - screenshots of visualizations
+5. `requirements.txt` - necessary Python packages
+
+*How It Works*
+1. Requests & BeautifulSoup are used to scrape IBM-provided sample data from the website.
+2. yfinance fetches historical stock prices.
+3. pandas organizes the data into clean, structured tables.
+4. matplotlib visualizes stock value trends over time.
+5. Optional: sqlite3 stores and retrieves intermediate data.
+
+*Sample Visualizations*
+
+
+
