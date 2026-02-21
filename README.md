@@ -1,4 +1,4 @@
-# 📊 IBM Data Science Python Project
+# IBM Data Science Python Project
 
 ## Project Overview
 This project demonstrates data analysis and visualization skills using Python. 
