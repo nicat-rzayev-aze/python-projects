@@ -1,6 +1,6 @@
-<div align="center">
 📊 IBM Data Science Python Project
-
+# asaa
+## asasas
 *Project Overview*
 This project demonstrates data analysis and visualization skills using Python. 
 It contains two scripts analyzing stock prices of Tesla and GameStop using real-world data.
