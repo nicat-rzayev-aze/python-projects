@@ -30,8 +30,4 @@ Run the scripts `tesla_stock.py` and `gamestop_stock.py` in Python to reproduce 
 # Conclusion
 
 ## This project showcases Python skills in:
-1.Web scraping and API usage
-2.Data cleaning and table management
-3.Data visualization
-4.Basic database handling
-5.Completed as part of the IBM Data Science Professional Certificate to strengthen Python and data analysis skills.
+Web scraping and API usage | Data cleaning and table management | Data visualization | Basic database handling | Completed as part of the IBM Data Analyst Professional Certificate to strengthen Python and data analysis skills.
