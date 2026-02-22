@@ -16,12 +16,10 @@ def make_graph(stock_data, revenue_data, stock):
 
     fig, axes = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
 
-    # Stock price
     axes[0].plot(pd.to_datetime(stock_data_specific.Date), stock_data_specific.Close.astype("float"), label="Share Price", color="blue")
     axes[0].set_ylabel("Price ($US)")
     axes[0].set_title(f"{stock} - Historical Share Price")
 
-    # Revenue
     axes[1].plot(pd.to_datetime(revenue_data_specific.Date), revenue_data_specific.Revenue.astype("float"), label="Revenue", color="green")
     axes[1].set_ylabel("Revenue ($US Millions)")
     axes[1].set_xlabel("Date")
@@ -50,4 +48,5 @@ gme_revenue["Revenue"] = pd.to_numeric(gme_revenue["Revenue"], errors="coerce")
 gme_revenue.dropna(inplace=True)
 gme_revenue = gme_revenue[gme_revenue['Revenue'] != ""]
 make_graph(gme_data, gme_revenue, 'GME')
+
 
