@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-from bs4 import BeautifulSoup        #I imported the libraries 
+from bs4 import BeautifulSoup        #I imported the libraries
 import requests as rq
 from sqlite3.dbapi2 import Date
 import yfinance as yf
 
 
 tesla = yf.Ticker("TSLA")
-tesla_data = tesla.history(period = "max")    #I pulled historical data with yfinance
+tesla_data = tesla.history(period = "max")        #I pulled historical data with yfinance
 tesla_data.reset_index(inplace=True)
 
 
@@ -17,12 +17,12 @@ def make_graph(stock_data, revenue_data, stock):
 
     fig, axes = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
 
-    # Stock price
+            # Stock price
     axes[0].plot(pd.to_datetime(stock_data_specific.Date), stock_data_specific.Close.astype("float"), label="Share Price", color="blue")
     axes[0].set_ylabel("Price ($US)")
     axes[0].set_title(f"{stock} - Historical Share Price")
 
-    # Revenue
+            # Revenue
     axes[1].plot(pd.to_datetime(revenue_data_specific.Date), revenue_data_specific.Revenue.astype("float"), label="Revenue", color="green")
     axes[1].set_ylabel("Revenue ($US Millions)")
     axes[1].set_xlabel("Date")
@@ -51,4 +51,5 @@ tesla_revenue["Revenue"] = pd.to_numeric(tesla_revenue["Revenue"], errors="coerc
 tesla_revenue.dropna(inplace=True)
 tesla_revenue = tesla_revenue[tesla_revenue['Revenue'] != ""]                #Last part. I created a graph using the function I created.
 make_graph(tesla_data, tesla_revenue, 'Tesla')
+
 
